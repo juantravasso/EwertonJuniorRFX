@@ -20,11 +20,5 @@ export const colors = {
   backgroundContrast: palette.Black,
 } as const
 
-
-export const shadow = {
-  custom: '0 -3px 12px rgba(0,0,0,0.05)',
-} as const
-
 export type PaletteColors = keyof typeof palette
 export type ThemeColors = keyof typeof colors
-export type ThemeShadow = keyof typeof shadow
