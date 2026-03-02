@@ -11,13 +11,17 @@ export const palette = {
 
 export const colors = {
   buttonPrimary: palette.gray2,
+
   background: palette.offWhite,
   backgroundSecondary: palette.gray5,
+
   textPrimary: palette.gray1,
   textSecondary:palette.gray2,
+
   dividingLines:palette.gray3,
+  
   icons:palette.gray3,
-  backgroundContrast: palette.Black,
+  
 } as const
 
 export type PaletteColors = keyof typeof palette
