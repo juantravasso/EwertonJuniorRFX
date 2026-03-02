@@ -29,7 +29,7 @@ export function CompaniesContent({
         bold
         style={{ color: colors.textSecondary }}
     >
-        CAMPAIGNS WITH
+        PROJECTS WITH
     </Text>
 
     <motion.div
