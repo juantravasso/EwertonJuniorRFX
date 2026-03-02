@@ -4,7 +4,7 @@ import Higgsfield from '../../assets/Higgsfield.svg'
 
 export function HomeContent() {
     return (
-        <Box className="w-full mt-18 mb-18 flex flex-col items-center px-20">
+        <Box className="w-full mt-18 mb-18 flex flex-col items-center px-10">
                   <Button 
                     href=" https://higgsfield.ai" 
                     className="w-full"
