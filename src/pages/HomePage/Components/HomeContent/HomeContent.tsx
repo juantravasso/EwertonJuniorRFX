@@ -1,6 +1,6 @@
-import { Box } from "../Box/Box";
+import { Box } from "../../../../components/Box/Box";
 import { Button } from "../Button/Button";
-import Higgsfield from '../../assets/Higgsfield.svg'
+import Higgsfield from "../../../../assets/Higgsfield.svg";
 
 export function HomeContent() {
     return (
@@ -10,7 +10,7 @@ export function HomeContent() {
                     className="w-full"
                   >
                     <Box className="flex items-center gap-3">              
-                      <img src={Higgsfield} alt="Logo" className="w-10" />
+                      <img src={Higgsfield} alt="Logo" className="w-10 dark:drop-shadow-[0_0_2px_white]" />
                       <span>Higgsfield</span>
                     </Box>
                   </Button>

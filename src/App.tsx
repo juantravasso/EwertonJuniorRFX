@@ -5,7 +5,9 @@ import { AppRoutes } from "./routes/AppRoutes";
 function App() {
   return (
     <Box>
+      
       <Header/>
+      
       <AppRoutes/>
     </Box>
   );

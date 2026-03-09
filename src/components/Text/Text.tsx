@@ -1,82 +1,70 @@
-import React from 'react'
-import { colors, type ThemeColors } from '../../theme/theme'
+import React from "react";
 
 export type TextVariants =
-  | 'heading'
-  | 'paragraphLarge'
-  | 'paragraphMedium'
-  | 'paragraphSmall'
+  | "heading"
+  | "paragraphLarge"
+  | "paragraphMedium"
+  | "paragraphSmall";
+
+type TextColors = "primary" | "secondary";
 
 const fontStyles: Record<
   TextVariants,
-  { size: string; 
-    color: ThemeColors;
-    bold?: boolean;
-    italic?: boolean
-    semiBold?: boolean
+  {
+    size: string;
+    color: TextColors;
   }
 > = {
   heading: {
-    size: 'text-[22px] leading-[26.4px]',
-    color: 'textPrimary',
+    size: "text-[22px] leading-[26.4px]",
+    color: "primary",
   },
 
   paragraphLarge: {
-    size: 'text-[48px] leading-[57.6px]',
-    color: 'textPrimary',
+    size: "text-[48px] leading-[57.6px]",
+    color: "primary",
   },
 
   paragraphMedium: {
-    size: 'text-[22px] leading-[26.4px]',
-    color: 'textPrimary',
+    size: "text-[22px] leading-[26.4px]",
+    color: "primary",
   },
 
   paragraphSmall: {
-    size: 'text-[14px] leading-[19.6px]',
-    color: 'textSecondary',
+    size: "text-[14px] leading-[19.6px]",
+    color: "secondary",
   },
-}
-
-const fontFamily = {
-  bold: 'font-bold',
-  italic: 'italic',
-  semiBold: 'font-medium',
-  regular: 'font-normal',
-}
+};
 
 interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
-  preset?: TextVariants
-  color?: ThemeColors
-  bold?: boolean
-  italic?: boolean
-  semiBold?: boolean
+  preset?: TextVariants;
+  color?: TextColors;
+  bold?: boolean;
+  italic?: boolean;
+  semiBold?: boolean;
 }
 
 export function Text({
   children,
-  preset = 'paragraphMedium',
+  preset = "paragraphMedium",
   color,
   bold,
   italic,
   semiBold,
-  className = '',
-  style,
+  className = "",
   ...rest
 }: TextProps) {
-  const presetStyle = fontStyles[preset]
+  const presetStyle = fontStyles[preset];
 
-const weightClass = bold
-  ? fontFamily.bold
-  : semiBold
-  ? fontFamily.semiBold
-  : presetStyle.bold
-  ? fontFamily.bold
-  : presetStyle.semiBold
-  ? fontFamily.semiBold
-  : fontFamily.regular
+  const weightClass = bold
+    ? "font-bold"
+    : semiBold
+    ? "font-medium"
+    : "font-normal";
 
-const italicClass =
-  italic || presetStyle.italic ? fontFamily.italic : ''
+  const italicClass = italic ? "italic" : "";
+
+  const colorClass = `text-${color ?? presetStyle.color}`;
 
   return (
     <p
@@ -85,14 +73,11 @@ const italicClass =
         ${presetStyle.size}
         ${weightClass}
         ${italicClass}
+        ${colorClass}
         ${className}
       `}
-      style={{
-        color: colors[color ?? presetStyle.color],
-        ...style,
-      }}
     >
       {children}
     </p>
-  )
+  );
 }

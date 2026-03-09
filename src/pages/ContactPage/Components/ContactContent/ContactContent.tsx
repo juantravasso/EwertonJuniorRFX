@@ -1,7 +1,7 @@
 import { Mail } from "lucide-react";
-import { colors } from "../../theme/theme";
-import { Box } from "../Box/Box";
-import { Text } from "../Text/Text";
+import { Box } from "../../../../components/Box/Box";
+import { Text } from "../../../../components/Text/Text";
+
 
 export function ContactContent() {
     return(
@@ -11,19 +11,18 @@ export function ContactContent() {
         
         <Text
           preset="paragraphSmall"
-          className="tracking-[0.2em]"
-          style={{ color: colors.textSecondary }}
+          className="tracking-[0.2em] text-text-secondary"
         >
           ENTRE EM CONTATO
         </Text>
 
         <Box className="flex flex-col leading-tight">
           <Text preset="paragraphLarge" >
-            <span style={{ color: colors.textPrimary }}>
+            <span className="text-text-primary">
               VAMOS TRABALHAR
             </span>
             <br />
-            <span style={{ color: colors.textSecondary }}>
+            <span className="text-text-secondary">
               JUNTOS.
             </span>
           </Text>
@@ -33,8 +32,7 @@ export function ContactContent() {
           
           <Text
             preset="paragraphSmall"
-            className="tracking-[0.2em]"
-            style={{ color: colors.textSecondary }}
+            className="tracking-[0.2em] text-text-secondary"
           >
             EMAIL
           </Text>
@@ -45,13 +43,11 @@ export function ContactContent() {
           >
             <Mail
               size={20}
-              className="transition-colors duration-300"
-              style={{ color: colors.textPrimary }}
+              className="transition-colors duration-300 text-text-primary"
             />
 
             <span
-              className="transition-colors duration-300 group-hover:opacity-70"
-              style={{ color: colors.textPrimary }}
+              className="transition-colors duration-300 group-hover:opacity-70 text-text-primary"
             >
               contato@ewertonjuniorrfx.com
             </span>

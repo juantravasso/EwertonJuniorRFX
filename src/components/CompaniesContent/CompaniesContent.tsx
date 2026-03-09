@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Text } from "../Text/Text";
-import { colors } from "../../theme/theme";
 import { companies } from "./companies.data";
 
 interface Company {
@@ -20,14 +19,12 @@ export function CompaniesContent({
 }: CompaniesContentProps) {
     return (
     <div
-        className="relative w-full overflow-hidden"
-        style={{ background: colors.backgroundSecondary }}
+        className="relative w-full overflow-hidden bg-background-secondary"
     >
     <Text
-        className="mt-auto py-10 flex flex-col items-center"
+        className="mt-auto py-10 flex flex-col items-center text-text-secondary"
         preset="paragraphSmall"
         bold
-        style={{ color: colors.textSecondary }}
     >
         PROJECTS WITH
     </Text>

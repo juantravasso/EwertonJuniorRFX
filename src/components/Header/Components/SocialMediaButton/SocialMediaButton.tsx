@@ -1,5 +1,4 @@
-import { Youtube, Instagram } from 'lucide-react'
-import { colors } from '../../theme/theme'
+import { Youtube, Instagram } from "lucide-react";
 
 export function SocialMedia() {
   return (
@@ -18,13 +17,13 @@ export function SocialMedia() {
         <Instagram size={18} />
       </SocialButton>
     </div>
-  )
+  );
 }
 
 interface SocialButtonProps {
-  href: string
-  label: string
-  children: React.ReactNode
+  href: string;
+  label: string;
+  children: React.ReactNode;
 }
 
 function SocialButton({ href, label, children }: SocialButtonProps) {
@@ -38,22 +37,13 @@ function SocialButton({ href, label, children }: SocialButtonProps) {
         w-10 h-10
         flex items-center justify-center
         rounded-full
+        border border-icons
+        text-icons
         transition-colors
+        hover:text-button-primary
       "
-      style={{
-        border: `1px solid ${colors.icons}`,
-        color: colors.icons,
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.color = colors.buttonPrimary
-        e.currentTarget.style.borderColor = colors.icons
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.color = colors.icons
-        e.currentTarget.style.borderColor = colors.icons
-      }}
     >
       {children}
     </a>
-  )
+  );
 }

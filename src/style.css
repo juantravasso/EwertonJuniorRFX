@@ -1,5 +1,52 @@
 @import "tailwindcss";
 
-* {
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+@theme inline {
+  --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+
+  --color-button-primary: var(--button-primary);
+
+  --color-dividing-lines: var(--dividing-lines);
+  --color-icons: var(--icons);
 }
+
+:root {
+  --background: #FFFFFF;
+  --background-secondary: #F5F5F5;
+
+  --text-primary: #111111;
+  --text-secondary: #888888;
+
+  --button-primary: #888888;
+
+  --dividing-lines: #B3B3B3;
+  --icons: #B3B3B3;
+}
+
+.dark {
+  --background: #000000;
+  --background-secondary: #111111;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #B3B3B3;
+
+  --button-primary: #FFFFFF;
+
+  --dividing-lines: #888888;
+  --icons: #888888;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--background);
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
