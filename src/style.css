@@ -11,6 +11,11 @@
 
   --color-dividing-lines: var(--dividing-lines);
   --color-icons: var(--icons);
+
+  --letter-spacing-cinematic: 0.25em;
+  --letter-spacing-wide: 0.12em;
+
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 :root {
@@ -24,6 +29,8 @@
 
   --dividing-lines: #B3B3B3;
   --icons: #B3B3B3;
+
+  --font-display: 'Inter', sans-serif;
 }
 
 .dark {
@@ -50,3 +57,13 @@ body {
   min-height: 100dvh;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.animate-on-load {
+  opacity: 0;
+}
